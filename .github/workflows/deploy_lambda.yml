@@ -28,11 +28,11 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
       
     - name: Build SAM Application
-      run: sam build
+      run: sam build --template sam-lambda/template.yaml
 
-    - name: Deploy SAM Application
+    - name: Deploy SAM Application 
       run: |
-          sam deploy --stack-name $STACK_NAME --s3-bucket $S3_BUCKET_NAME --capabilities CAPABILITY_IAM --region ${{ secrets.AWS_REGION }} --no-confirm-changeset
+          sam deploy --template sam-lambda/template.yaml --stack-name $STACK_NAME --s3-bucket $S3_BUCKET_NAME --capabilities CAPABILITY_IAM --region ${{ secrets.AWS_REGION }} --no-confirm-changeset
 
     - name: Output API Gateway Endpoint
       run: |
