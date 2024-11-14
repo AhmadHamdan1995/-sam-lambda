@@ -20,6 +20,13 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v3
 
+    - name: Set Up Python 3.8
+      run: |
+        sudo apt-get update -y
+        sudo apt-get install -y python3.8 python3.8-dev python3.8-venv
+        sudo ln -s /usr/bin/python3.8 /usr/bin/python  # Ensure 'python' points to python3.8
+        python --version  # Verify Python version
+        
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v2
       with:
