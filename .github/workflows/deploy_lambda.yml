@@ -22,7 +22,7 @@ jobs:
 
     - name: Set Up Python 3.8
       run: |
-        pytho3 --version
+        python3 --version
         
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v2
