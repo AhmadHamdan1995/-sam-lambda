@@ -22,7 +22,7 @@ region = "eu-west-1"
 image_repositories = []
 
 [default.package.parameters]
-resolve_s3 = true
+
 
 [default.sync.parameters]
 watch = true
