@@ -1,7 +1,11 @@
 {
+    "build": {
+        "@saveall": true
+    },
     "extensions": {
         "@aws.profile": "",
         "@aws.samcli.lambdaTimeout": 90000,
+        "@aws.suppressPrompts.codeWhispererConnectionExpired": true,
         "@editor.acceptSuggestionOnEnter": "on",
         "@editor.snippetSuggestions": "top",
         "@editor.suggest.preview": true,
@@ -41,11 +45,6 @@
         "@first": true
     },
     "workspace": {
-        "@folders": [
-            {
-                "name": "ahmad",
-                "path": "/ahmad"
-            }
-        ]
+        "@folders": []
     }
 }
