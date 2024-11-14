@@ -25,6 +25,7 @@ def generate_response(response_code, message):
             "Access-Control-Allow-Methods": "POST" 
         }
     }
+    
 
 def generate_image(prompt):
     # Set up the AWS clients
